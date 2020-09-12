@@ -1,30 +1,111 @@
 .outerbox{
   width: 28%;
-  height: 35em;
+  height: 36em;
   box-shadow: 0 0 10px rgb(179, 179, 231);
   border-radius: 5px;
-  margin:  30px auto;
-  padding: 15px 5px;
+  margin:  20px auto;
+  padding: 10px 5px;
   }
+
+.Main_title{
+  padding:  0px 50px ;
+  font-weight: 900;
+  color: rgb(80, 25, 25);
+}
+.Main_title2{
+  color: rgb(46, 6, 189);
+}
   .balance{
-    background: rgb(230, 228, 228);
+    margin: auto;
+    background: rgb(177, 194, 211);
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+    padding: 10px;
   }
   .expensdiv{
     display: flex;
     justify-content: space-around;
     
   }
+.history_head{
+  padding: 0px 14px;
+  position: relative;
+  top:10px;
+}
   .list ul{
-    height: 150px;
+    height: 135px;
     overflow-y: scroll;
     padding: 0px;
 
   }
   .list li{
-    /* background-color: rgb(178, 151, 233); */
-    border-bottom: 1px dotted black;
+   
     width: 90%;
     padding:7px;
     display: flex;
     justify-content: space-between;
+    margin: auto;
+    margin-left: 16px;
+    margin-bottom: 10px;
+    background: rgb(240, 239, 239);
+    border-radius: 5px;
+  }
+
+  .list ul{
+    margin: auto;
+  }
+  .input_form input{
+    width: 90%;
+    border:2px solid rgb(9, 143, 167);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 4px;
+    outline:none;
+
+
+  }
+  .input_form input:focus{
+    border:2px solid rgb(238, 41, 41);
+
+  }
+  .input_form {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .income ,.exp {
+    background: rgb(90, 113, 240);
+    border-radius: 5px;
+    padding: 15px 35px;
+    width:90px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgb(128, 125, 125);
+  }
+  .exp {
+    background: rgb(248, 26, 55);
+  }
+  .buttons{
+    width: 95%;
+    border: none;
+    background: rgb(177, 194, 211);
+    border-radius: 5px;
+    padding: 8px;
+    color:black;
+    font-weight: 700;
+    
+  }
+  .buttons:focus{
+    box-shadow: 0 2px 4px blue;
+  }
+  hr{
+    color: lavender
+  }
+  .bolder{
+    font-weight: 900;
+    font-size: 18px;
+  }
+  .lighter{
+    font-weight: 200;
+    
   }

@@ -4,19 +4,32 @@ import './App.css';
 function Child() {
   return (
     <div className = 'outerbox'>
-        <h2>Expense Tracker</h2>
+        <h1 className = 'Main_title'>Expense<span className = 'Main_title2'>Tracker</span></h1>
         <div className='balance'>
-            <h3>Current Balance<br />$1000</h3>
+            <span className = 'bolder'>Current Balance</span>
+            <span>5000</span>
         </div>
         <div className='expensdiv'>
-            <p>Income<br /><span>$1000</span></p>
-            <p>Income<br /><span>$1000</span></p>
+            <p className ='income lighter'>Income<br /><span className ='bolder'> $1000</span></p>
+            <p className ='exp lighter'>Expenses <br /><span className =' bolder'>$1000</span></p>
         </div>
         <div className = "history">
-            <h3>History</h3>
+            <h3 className ="history_head">History</h3>
             <hr />
             <div className ='list'>
                 <ul> 
+                    <li>
+                        <span > Cash</span>
+                        <span>500</span>
+                    </li>
+                    <li>
+                        <span>Cash</span>
+                        <span>500</span>
+                    </li>
+                    <li>
+                        <span>Cash</span>
+                        <span>500</span>
+                    </li>
                     <li>
                         <span>Cash</span>
                         <span>500</span>
@@ -35,18 +48,18 @@ function Child() {
                     </li>
                 </ul>
             </div>
+            <hr />
         </div>
-        <form className ='add_input'>
+        <form className ='input_form'>
             <label>
                 <input placeholder ="Enter Description" required></input>
             </label>
             <br />
             <label>
-                <input placeholder ="Enter Description" required></input>
+                <input placeholder ="Enter Amount" required></input>
             </label>
             <br />
-            <button>ADD</button>
-            <button>Update</button>
+            <button className ='buttons'>ADD</button>
         </form>
 
 
