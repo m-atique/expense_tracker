@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
-import './App.css';
-import {transCntxt} from './trans_Cntxt'
+// import {transCntxt} from '../trans_Cntxt'
 
 function History (){
-    let transections = useContext(transCntxt)
+    // let transections = useContext(transCntxt)
     return(
         <div className = "history">
             <h3 className ="history_head">History</h3>
@@ -11,14 +10,16 @@ function History (){
             <div className ='list'>
                 <ul> 
 {/* -------------Assigning transections array value to the list */}
-                    {transections.map((trans_obj,index)=>{
+                    {/* {transections.map((trans_obj,index)=>{ */}
                         return(
                         <li>
-                        <span > {trans_obj.desc}</span>
-                        <span>{trans_obj.amount}</span>
+                        {/* <span > {trans_obj.desc}</span>
+                        <span>{trans_obj.amount}</span> */}
+                        <button className = 'del_btn'>X</button>
                     </li>
 
-                    )})}
+                    )
+                {/* })} */}
 {/* ------------------------------------------------------------------*/}                
                 </ul>
             </div>
