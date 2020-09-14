@@ -1,27 +1,23 @@
 import React, { useContext } from 'react';
-// import {transCntxt} from '../trans_Cntxt'
+import {GlobalCntxt} from './globalState';
+import Transection from './transection'
+
 
 function History (){
-    // let transections = useContext(transCntxt)
+   const {transections} = useContext(GlobalCntxt)
+   console.log(transections)
     return(
         <div className = "history">
             <h3 className ="history_head">History</h3>
             <hr />
             <div className ='list'>
-                <ul> 
-{/* -------------Assigning transections array value to the list */}
-                    {/* {transections.map((trans_obj,index)=>{ */}
-                        return(
-                        <li>
-                        {/* <span > {trans_obj.desc}</span>
-                        <span>{trans_obj.amount}</span> */}
-                        <button className = 'del_btn'>X</button>
-                    </li>
-
+                <ul>
+                    {transections.map(transections_object => (
+                        <Transection  key = {transections_object.id} entry = {transections_object} />   
                     )
-                {/* })} */}
-{/* ------------------------------------------------------------------*/}                
+                    )}
                 </ul>
+            
             </div>
             <hr />
         </div>
@@ -30,3 +26,19 @@ function History (){
 
 
 export default History
+
+
+// {/* <ul> 
+// {/* -------------Assigning transections array value to the list */}
+//    {transection.map((trans_obj,index)=>{
+//                 return(
+//                         <li>
+//                         <span > {trans_obj.Discrip}</span>
+//                         <span>{trans_obj.Amount}</span>
+//                         <button className = 'del_btn'>X</button>
+//                     </li>
+
+//                     )
+//                  })} 
+// {/* ------------------------------------------------------------------*/}                
+//                 </ul> */}

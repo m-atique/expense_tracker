@@ -3,7 +3,7 @@ import mainReducer from './mainReducer';
 
 
 const Intialstate = {
-    transection:[
+    transections:[
                 {id:1,Discrip:'Income',Amount:1000},
                 {id:2,Discrip:'book',Amount:-500},
                 {id:3,Discrip:'Camera',Amount:-400}
@@ -22,7 +22,7 @@ export const Globalprovider = ({children})=>{
         
         <GlobalCntxt.Provider value = {
             {
-            transection: state.transection
+            transections: state.transections
             }
         }>
             {children}
