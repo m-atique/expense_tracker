@@ -5,7 +5,6 @@ import Transection from './transection'
 
 function History (){
    const {transections} = useContext(GlobalCntxt)
-   console.log(transections)
     return(
         <div className = "history">
             <h3 className ="history_head">History</h3>
