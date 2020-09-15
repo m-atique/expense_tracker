@@ -4,7 +4,7 @@ import mainReducer from './mainReducer';
 
 const Intialstate = {
     transections:[
-                {id:1,Discrip:'Income',Amount:1000},
+                {id:1,Discrip:'Income',Amount:9000},
                 {id:2,Discrip:'book',Amount:-500},
                 {id:3,Discrip:'Camera',Amount:-400}
 
