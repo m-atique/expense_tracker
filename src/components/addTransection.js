@@ -1,12 +1,26 @@
-import React,{useState} from 'react';
+import React,{useContext, useState} from 'react';
+import {GlobalCntxt} from './globalState'
 
 
 function AddTransection() {
   const [Descrip, setDescrip] = useState('')
-  const [Amount, setAmount] = useState(0)
+  const [Amount, setAmount] = useState()
+  const {add_trans} = useContext(GlobalCntxt)
+  const OnSubmit = (e)=> {
+    e.preventDefault();
+    
+    const newtrans = {
+      id: new Date().getTime(),
+      Descrip,
+      Amount: +Amount
+    }
+    add_trans(newtrans)
+
+  }
+
   return (
     <div>
-        <form className ='input_form'>
+        <form className ='input_form' onSubmit = {OnSubmit}>
             <label>
                 <input
                  placeholder ="Enter Description" 

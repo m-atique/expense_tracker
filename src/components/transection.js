@@ -3,13 +3,14 @@ import {GlobalCntxt} from './globalState'
 
 
 const Transection = ({entry})=>{
-    const sign = entry.Amount<0? "-":"+"
+const sign = entry.Amount<0? "-":"+"
+const {del_trans} = useContext(GlobalCntxt)
    
     return(
         <li>
-            <span > {entry.Discrip}</span>
+            <span > {entry.Descrip}</span>
             <span>{sign}${Math.abs(entry.Amount)}</span>
-            <button className = 'del_btn'>X</button>
+            <button className = 'del_btn' onClick = {()=> del_trans(entry.id)}>X</button>
         </li>
     )
         
