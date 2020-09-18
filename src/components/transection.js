@@ -8,6 +8,7 @@ const {del_trans} = useContext(GlobalCntxt)
    
     return(
         <li>
+            
             <span > {entry.Descrip}</span>
             <span>{sign}${Math.abs(entry.Amount)}</span>
             <button className = 'del_btn' onClick = {()=> del_trans(entry.id)}>X</button>

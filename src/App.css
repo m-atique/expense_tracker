@@ -109,22 +109,25 @@
     font-weight: 200;
     
   }
-  .del-btn {
+  .del_btn {
     cursor: pointer;
-    background-color: #8a6a66;
+    background-color: #c7220d;
     border: 0;
     color: #fff;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 12px;
+    
     padding: 2px 5px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(-100%, -50%);
+    /* position: absolute; */
+    top: 49%;
+    left: 20%; 
+     
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; 
+    border-radius: 50px;
+    width: 18px;
+    height: 18px
   }
   
-  .list li:hover .delete-btn {
+  .list li:hover .del_btn {
     opacity: 1;
   }
