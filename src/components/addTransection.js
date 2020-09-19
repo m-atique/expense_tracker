@@ -15,6 +15,9 @@ function AddTransection() {
       Amount: +Amount
     }
     add_trans(newtrans)
+    setDescrip('')
+    setAmount('')
+    
 
   }
 

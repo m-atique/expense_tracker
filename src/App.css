@@ -34,9 +34,11 @@
   top:10px;
 }
   .list ul{
-    height: 135px;
+    height: 125px;
     overflow-y: scroll;
     padding: 0px;
+    margin: auto;
+    padding-top: 8px;
 
   }
   .list li{
@@ -50,11 +52,10 @@
     margin-bottom: 10px;
     background: rgb(240, 239, 239);
     border-radius: 5px;
+    position: relative;
   }
 
-  .list ul{
-    margin: auto;
-  }
+  
   .input_form input{
     width: 90%;
     border:2px solid rgb(9, 143, 167);
@@ -116,19 +117,17 @@
     color: #fff;
     font-size: 12px;
     padding: 2px 5px;
-    display: none;
     opacity: 0;
     transition: opacity 0.3s ease; 
     border-radius: 50px;
     width: 18px;
     height: 18px;
+    position:absolute;
+    left: -8px;
+    top: -8px;
     
   }
   
   .list li:hover .del_btn {
     opacity: 1;
-    display:inline-flex;
-    position: absolute;
-
-   
   }

@@ -1,4 +1,4 @@
-import React,{Children, createContext,useReducer} from 'react'
+import React,{children, createContext,useReducer} from 'react'
 import mainReducer from './mainReducer';
 
 
@@ -36,8 +36,6 @@ function del_trans(id){
     });
 
 }
-
-
     return(
         
         <GlobalCntxt.Provider value = {
