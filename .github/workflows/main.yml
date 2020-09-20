@@ -2,12 +2,12 @@
 
 name: Expense tracker
 
-# Controls when the action will run. Triggers the workflow on push or pull request
+## Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
     branches: [ master ]
-
+  
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -18,23 +18,22 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-    
-    - name: Install NodeJS
-      uses: actions/setup-node@v2-beta
-      with:
-        node-version: 12
-    
-    - uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: install # will run `yarn install` command
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+    # Setting up node enivorment
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2-beta
+        with:
+          version: 12
+    # setting git hub envoirment
+      - name: GitHub Action for Yarn
+        uses: Borales/actions-yarn@v2.3.0
+    # Installing yarn
+      - name: Installing Yarn
+        run: yarn build
+    # installing surg
+      - name: installing Surge
+        run: npm install -g surge
         
-    - name: Build React App
-      run: yarn build
-      
-    - name: Install Surge
-      run: npm install --global surge
-
     - name: Deploy to Surge
       run: surge ./build http://expensetracker_by_atique.surge.sh/--token ${{ secrets.SURGE_TOKEN}}
