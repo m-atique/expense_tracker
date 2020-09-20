@@ -1,14 +1,11 @@
 # This is a basic workflow to help you get started with Actions
 
 name: Expense tracker
-
-## Controls when the action will run. Triggers the workflow on push or pull request
+# Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
     branches: [ master ]
-  
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -36,4 +33,4 @@ jobs:
         run: npm install -g surge
     # deploying surge site
       - name: Deploy to Surge
-      run: surge ./build http://expensetracker_by_atique.surge.sh/--token ${{ secrets.SURGE_TOKEN}}
+        run: surge ./build http://expensetracker_by_atique.surge.sh/--token ${{ secrets.SURGE_TOKEN}}
