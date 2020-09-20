@@ -107,7 +107,7 @@
     font-size: 18px;
   }
   .lighter{
-    font-weight: 200;
+    font-weight: 400;
     
   }
   .del_btn {
@@ -130,4 +130,7 @@
   
   .list li:hover .del_btn {
     opacity: 1;
+  }
+  .list li:hover{
+    box-shadow:  0 0 5px rgb(153, 2, 2);
   }

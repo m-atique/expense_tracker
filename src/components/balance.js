@@ -11,7 +11,7 @@ function Balance (){
     return(
         <div className='balance'>
             <span className = 'bolder'>Current Balance</span>
-            <span>$ {balance}
+            <span className='bolder'>$ {balance}
             </span>
         </div>
 
