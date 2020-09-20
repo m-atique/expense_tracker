@@ -31,6 +31,6 @@ jobs:
     # installing surg
       - name: installing Surge
         run: npm install -g surge
-    # deploying surge site
+    # deploying  on surge site
       - name: Deploy to Surge
         run: surge ./build http://expensetracker_by_atique.surge.sh/--token ${{ secrets.SURGE_TOKEN}}
